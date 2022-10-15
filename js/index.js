@@ -1,5 +1,11 @@
 let NombreCompleto = prompt ("Ingresa tu nombre completo");
 
+if (NombreCompleto === "German Balduini"){
+    console.log ("Bienvenido German")
+}else{
+    alert ("No se reconoce el nombre completo")
+}
+
 
 
 function saludar(usuario){
