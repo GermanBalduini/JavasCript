@@ -1,41 +1,20 @@
-let NombreCompleto = prompt ("Ingresa tu nombre completo");
-
-if (NombreCompleto === "German Balduini"){
-    console.log ("Bienvenido German")
-}else{
-    alert ("No se reconoce el nombre completo")
-}
-
-
-
-function saludar(usuario){
-    console.log("Bienvenido", usuario)
-}
-
-function login() {
-    
-    let usuario = prompt("Ingresa tu nombre de usuario:")
-    
-    if (usuario !==""){
-        
-        saludar(usuario)
-    
-    } else {
-        
-        console.warn("No se reconoce el usuario")
-    
-    }
-
-}
-
 
 function Verproductos(){
     let productos = "Maquinas disponibles: \n" +
                     "1) Prensa \n" +
                     "2) Banco plano \n" +
                     "3) Camilla de cuadriceps \n"
+                    
+                    function nuevoCliente(){
+                        let SaludoBienvenida = prompt("Bienvenido a Maquinas GB-FITNESS, en este momento tenemos stock de los siguientes productos: " + productos + "cual de estos productos te interesan?").toLowerCase()
+                        if (SaludoBienvenida === "Camilla de cuadriceps"){
+                            let cantidadProductos = parseInt((prompt("La camilla de cuadriceps tiene un valor de $30.000, cuantas desea?")))
+                            Carrito.push(cantidadProductos + "Camilla de cuadriceps")
+                        }
+                    }
 
     let respuesta = prompt ("Ingresa el numero de producto para ver el precio: \n" + productos)
+    
     switch (parseInt(respuesta)){
         case 1:
             console.log("Producto elegido: Prensa. Su precio es de $300.000")
@@ -55,3 +34,12 @@ function Verproductos(){
         Verproductos()
     }
 }
+
+const productos = ["Camilla de cuadriceps, Camilla de Isquios, Prensa, Banco Plano, Banco Inclinado, Poleas Regulables"];
+
+const Carrito = [];
+
+const CamillaDeCuadriceps = 30.000;
+
+nuevoCliente ()
+
